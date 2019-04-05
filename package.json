@@ -4,6 +4,8 @@
   "description": "Finds infos from IMDB via OMDB API.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
     "commit": "npx git-cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -32,9 +34,13 @@
   "devDependencies": {
     "commitizen": "^3.0.7",
     "cz-conventional-changelog": "^2.1.0",
+    "nodemon": "^1.18.10",
     "projectz": "^1.7.4"
   },
   "maintainers": [
     "Kreig K. Zimmerman <myself@kreig.me> (http://kreig.me)"
-  ]
+  ],
+  "dependencies": {
+    "hapi": "^18.1.0"
+  }
 }
