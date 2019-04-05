@@ -61,7 +61,7 @@ Usage instructions go here
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="myself@kreig.me) (http://kreig.me">Kreig K. Zimmerman</a></li></ul>
+<ul><li><a href="http://kreig.me">Kreig K. Zimmerman</a></li></ul>
 
 <h3>Sponsors</h3>
 
