@@ -73,7 +73,7 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="myself@kreig.me) (http://kreig.me">Kreig K. Zimmerman</a></li></ul>
+<ul><li><a href="http://kreig.me">Kreig K. Zimmerman</a></li></ul>
 
 <a href="https://github.com/kreig303/omdb-bot/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 
@@ -86,7 +86,7 @@ These amazing people have contributed code to this project:
 
 Unless stated otherwise all works are:
 
-<ul><li>Copyright &copy; <a href="myself@kreig.me) (http://kreig.me">Kreig K. Zimmerman</a></li></ul>
+<ul><li>Copyright &copy; <a href="http://kreig.me">Kreig K. Zimmerman</a></li></ul>
 
 and licensed under:
 

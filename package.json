@@ -15,9 +15,9 @@
     "imdb",
     "omdb"
   ],
-  "author": "Kreig K. Zimmerman (myself@kreig.me) (http://kreig.me)",
+  "author": "Kreig K. Zimmerman <myself@kreig.me> (http://kreig.me)",
   "contributors": [
-    "Kreig K. Zimmerman (myself@kreig.me) (http://kreig.me)"
+    "Kreig K. Zimmerman <myself@kreig.me> (http://kreig.me)"
   ],
   "license": "MIT",
   "bugs": {
