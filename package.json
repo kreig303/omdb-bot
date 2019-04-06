@@ -2,12 +2,21 @@
   "name": "omdb-bot",
   "version": "0.1.0",
   "description": "Finds infos from IMDB via OMDB API.",
-  "main": "index.js",
+  "main": "./src/server.js",
   "scripts": {
-    "start": "node index.js",
-    "start:dev": "nodemon index.js",
+    "start": "node ./src/server.js",
+    "start:dev": "nodemon",
     "commit": "npx git-cz",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lab -t 100",
+    "test-cov-html": "lab -r html -o coverage.html",
+    "lint": "npx standard",
+    "lint:fix": "npx standard --fix"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*"
+    ],
+    "delay": "1500"
   },
   "repository": {
     "type": "git",
@@ -32,10 +41,12 @@
     }
   },
   "devDependencies": {
+    "@hapi/lab": "^18.1.1",
     "commitizen": "^3.0.7",
     "cz-conventional-changelog": "^2.1.0",
     "nodemon": "^1.18.10",
-    "projectz": "^1.7.4"
+    "projectz": "^1.7.4",
+    "standard": "^12.0.1"
   },
   "maintainers": [
     "Kreig K. Zimmerman <myself@kreig.me> (http://kreig.me)"
