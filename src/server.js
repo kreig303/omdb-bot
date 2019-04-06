@@ -1,13 +1,14 @@
 'use strict'
 
 const Hapi = require('hapi')
-
+const server = Hapi.server({
+  port: 3030,
+  host: 'localhost'
+})
+const start = async () => {
+  await server.register([require('./api/omdb'), require('./api/poster')])
+}
 const init = async () => {
-  const server = Hapi.server({
-    port: 3030,
-    host: 'localhost'
-  })
-
   server.route({
     method: 'GET',
     path: '/',
@@ -15,6 +16,7 @@ const init = async () => {
       return 'The OMDB app is up and running.'
     }
   })
+  await start()
   await server.start()
   console.log('Server up on %s', server.info.uri)
 }
