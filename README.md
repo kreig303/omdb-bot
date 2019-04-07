@@ -19,27 +19,32 @@ Finds infos from IMDB via OMDB API.
 <!-- /DESCRIPTION -->
 
 
-<!-- INSTALL/ -->
+## Prerequisites
 
-<h2>Install</h2>
+1. `git` and `node` must be installed.
+2. Download a REST tool such as [Paw](https://paw.cloud) (Macintosh only) or [Postman](https://www.getpostman.com) (all major platforms).
+3. Register for an API key at [OMDB API](https://www.omdbapi.com/apikey.aspx).
 
-**Prerequisites: `git` and `node` must be installed!**
+## Install
 
-<ul>
-<li>Download: <code>git clone https://github.com/kreig303/omdb-bot.git</code></li>
-<li>Install: <code>npm it</code></li>
-</ul>
-
-<!-- /INSTALL -->
-
+```sh
+$ git clone https://github.com/kreig303/omdb-bot.git
+$ cd omdb-bot
+$ npm it
+```
 
 ## Usage
 
-**Prerequisites: Register for an API key at [OMDB API](https://www.omdbapi.com/apikey.aspx).**
+### Run
 
-<ul>
-<li>Run: <code>API_KEY=api-key-from-omdb npm start</code></li>
-</ul>
+```sh
+$ API_KEY=api-key-from-omdb npm start
+```
+
+### Queries (for REST tool)
+
+1. ```http://localhost:3030/api/omdb?title=[enter title of film here]``` (gets movie info)
+2. ```http://localhost:3030/api/poster?title=[enter title of film here]``` (gets movie poster)
 
 <!-- HISTORY/ -->
 
@@ -67,7 +72,7 @@ Finds infos from IMDB via OMDB API.
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="http://kreig.me">Kreig K. Zimmerman</a></li></ul>
+<ul><li><a href="https://github.com/kreig303">Kreig Zimmerman</a> — <a href="https://github.com/kreig303/omdb-bot/commits?author=kreig303" title="View the GitHub contributions of Kreig Zimmerman on repository kreig303/omdb-bot">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
 
@@ -79,7 +84,7 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="http://kreig.me">Kreig K. Zimmerman</a></li></ul>
+<ul><li><a href="https://github.com/kreig303">Kreig Zimmerman</a> — <a href="https://github.com/kreig303/omdb-bot/commits?author=kreig303" title="View the GitHub contributions of Kreig Zimmerman on repository kreig303/omdb-bot">view contributions</a></li></ul>
 
 <a href="https://github.com/kreig303/omdb-bot/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 
@@ -92,7 +97,7 @@ These amazing people have contributed code to this project:
 
 Unless stated otherwise all works are:
 
-<ul><li>Copyright &copy; <a href="http://kreig.me">Kreig K. Zimmerman</a></li></ul>
+<ul><li>Copyright &copy; 2019 <a href="https://github.com/kreig303">Kreig Zimmerman</a></li></ul>
 
 and licensed under:
 
