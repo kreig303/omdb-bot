@@ -43,8 +43,8 @@ $ API_KEY=api-key-from-omdb npm start
 
 ### Queries (for REST tool)
 
-1. ```http://localhost:3030/api/omdb?title=[enter title of film here]``` (gets movie info)
-2. ```http://localhost:3030/api/poster?title=[enter title of film here]``` (gets movie poster)
+1. ```http://localhost:3030/api/movie/[title of film]``` (gets movie info)
+2. ```http://localhost:3030/api/poster/id[IMDB ID for film]``` (gets movie poster)
 
 <!-- HISTORY/ -->
 
