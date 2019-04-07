@@ -6,7 +6,7 @@ const server = Hapi.server({
   host: 'localhost'
 })
 const addAPIs = async () => {
-  await server.register([require('./api/omdb'), require('./api/poster')])
+  await server.register([require('./api/movie'), require('./api/poster')])
 }
 const init = async () => {
   server.route({

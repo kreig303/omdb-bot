@@ -3,19 +3,18 @@
 const Wreck = require('@hapi/wreck')
 const Joi = require('@hapi/joi')
 
-let omdbCall = async (api, t) => {
-  const { req, res, payload } = await Wreck.get(`http://www.omdbapi.com/?apikey=${api}&t=${t}`)
-  console.log(payload.toString())
+let movieCall = async (key, title) => {
+  const { req, res, payload } = await Wreck.get(`http://www.omdbapi.com/?apikey=${key}&t=${title}`)
   return payload
 }
 
 const plugin = {
-  name: 'omdb-api',
+  name: 'movie',
   version: '0.1.0',
   register: (server, options) => {
     server.route({
       method: ['GET', 'PUT', 'POST'],
-      path: '/api/omdb/{title?}',
+      path: '/api/movie/{title?}',
       config: {
         validate: {
           params: {
@@ -24,13 +23,13 @@ const plugin = {
         }
       },
       handler: async (request, h) => {
-        console.log(request.params.title)
+        let findMovie
         try {
-          return await omdbCall(process.env.API_KEY, request.params.title)
-        } catch (ex) {
-          console.error(ex)
+          findMovie = await movieCall(process.env.API_KEY, request.params.title)
+        } catch (err) {
+          console.error(err)
         }
-        return null
+        return h.response(findMovie)
       }
     })
   }
