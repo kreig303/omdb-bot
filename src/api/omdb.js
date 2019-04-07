@@ -10,7 +10,7 @@ const plugin = {
       method: 'GET',
       path: '/api/omdb',
       handler: function (request, h) {
-        return 'hello, omdb'
+        return `a movie detail with ${process.env.API_KEY}`
       }
     })
 

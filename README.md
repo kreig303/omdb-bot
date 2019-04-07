@@ -23,17 +23,23 @@ Finds infos from IMDB via OMDB API.
 
 <h2>Install</h2>
 
-<a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
+**Prerequisites: `git` and `node` must be installed!**
+
 <ul>
-<li>Install: <code>npm install --save omdb-bot</code></li>
-<li>Require: <code>require('omdb-bot')</code></li>
+<li>Download: <code>git clone https://github.com/kreig303/omdb-bot.git</code></li>
+<li>Install: <code>npm it</code></li>
 </ul>
 
 <!-- /INSTALL -->
 
 
 ## Usage
-Usage instructions go here
+
+**Prerequisites: Register for an API key at [OMDB API](https://www.omdbapi.com/apikey.aspx).**
+
+<ul>
+<li>Run: <code>API_KEY=api-key-from-omdb npm start</code></li>
+</ul>
 
 <!-- HISTORY/ -->
 

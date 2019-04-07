@@ -10,7 +10,7 @@ const plugin = {
       method: 'GET',
       path: '/api/poster',
       handler: function (request, h) {
-        return 'hello, poster'
+        return `a poster with ${process.env.API_KEY}`
       }
     })
 
