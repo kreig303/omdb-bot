@@ -18,7 +18,7 @@ const plugin = {
       config: {
         validate: {
           params: {
-            id: Joi.string().min(9).max(9).required()
+            id: Joi.string().min(9).max(10).required()
           }
         }
       },
