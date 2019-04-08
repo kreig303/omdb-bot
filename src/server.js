@@ -21,7 +21,7 @@ const init = async () => {
   server.route({
     method: '*',
     path: '/{any*}',
-    handler: function (request, h) {
+    handler: (request, h) => {
       return Boom.notFound('That path doesn\'t exist!')
     }
   })
