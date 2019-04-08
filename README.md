@@ -33,12 +33,18 @@ $ cd omdb-bot
 $ npm it
 ```
 
+Then, create a `.env` file at the root of the app directory and include your api key in the following format:
+
+```
+API_KEY=your-api-key
+```
+
 ## Usage
 
 ### Run
 
 ```sh
-$ API_KEY=api-key-from-omdb npm start
+$ npm start
 ```
 
 ### Queries (for REST tool)
