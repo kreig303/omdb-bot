@@ -29,7 +29,7 @@ const plugin = {
         } catch (err) {
           console.error(err)
         }
-        return h.response(findMovie)
+        return h.response(findMovie).type('application/json')
       }
     })
   }
