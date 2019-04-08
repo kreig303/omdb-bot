@@ -1,6 +1,8 @@
 'use strict'
 
 const Hapi = require('hapi')
+const Boom = require('@hapi/boom')
+
 const server = Hapi.server({
   port: 3030,
   host: 'localhost'
@@ -19,8 +21,8 @@ const init = async () => {
   server.route({
     method: '*',
     path: '/{any*}',
-    handler: function (request, h) {
-      return '404'
+    handler: (request, h) => {
+      return Boom.notFound('That path doesn\'t exist!')
     }
   })
   await addAPIs()
