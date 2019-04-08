@@ -1,6 +1,6 @@
 {
   "name": "omdb-bot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Finds infos from IMDB via OMDB API.",
   "main": "./src/server.js",
   "scripts": {
@@ -53,6 +53,7 @@
     "Kreig Zimmerman (https://github.com/kreig303)"
   ],
   "dependencies": {
+    "@hapi/boom": "^7.4.2",
     "@hapi/joi": "^15.0.0",
     "@hapi/wreck": "^15.0.0",
     "hapi": "^18.1.0"
