@@ -7,7 +7,7 @@
 
 <!-- BADGES/ -->
 
-
+<span class="badge-travisci"><a href="http://travis-ci.org/kreig303/omdb-bot" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/kreig303/omdb-bot/master.svg" alt="Travis CI Build Status" /></a></span>
 
 <!-- /BADGES -->
 
@@ -21,7 +21,7 @@ Finds infos from IMDB via OMDB API.
 
 ## Prerequisites
 
-1. `git` and `node` must be installed.
+1. `git` and `node` must be installed. Use Node 10+.
 2. Download a REST tool such as [Paw](https://paw.cloud) (Macintosh only) or [Postman](https://www.getpostman.com) (all major platforms).
 3. Register for an API key at [OMDB API](https://www.omdbapi.com/apikey.aspx).
 
@@ -39,6 +39,12 @@ Then, create a `.env` file at the root of the app directory and include your api
 API_KEY=your-api-key
 ```
 
+If you are using port 8000 (the default) for something else, you can also add a different port here:
+
+```
+PORT=some-port
+```
+
 ## Usage
 
 ### Run
@@ -49,8 +55,8 @@ $ npm start
 
 ### Queries (for REST tool)
 
-1. ```http://localhost:3030/api/movie/[title of film]``` (gets movie info)
-2. ```http://localhost:3030/api/poster/[imdb id for film]``` (gets movie poster)
+1. ```http://localhost:8000/api/movie/[title of film]``` (gets movie info)
+2. ```http://localhost:8000/api/poster/[imdb id for film]``` (gets movie poster)
 
 <!-- HISTORY/ -->
 
