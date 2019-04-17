@@ -5,13 +5,20 @@ require('dotenv').config()
 const Hapi = require('hapi')
 const Boom = require('@hapi/boom')
 
+let appPort = process.env.PORT
+if (!appPort) {
+  appPort = 8000
+}
+
 const server = Hapi.server({
-  port: 3030,
+  port: appPort,
   host: 'localhost'
 })
+
 const addAPIs = async () => {
   await server.register([require('./api/movie'), require('./api/poster')])
 }
+
 const init = async () => {
   server.route({
     method: 'GET',
