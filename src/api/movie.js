@@ -4,8 +4,12 @@ const Wreck = require('@hapi/wreck')
 const Joi = require('@hapi/joi')
 
 let movieCall = async (key, title) => {
-  const { req, res, payload } = await Wreck.get(`http://www.omdbapi.com/?apikey=${key}&t=${title}`)
-  return payload
+  try {
+    const { payload } = await Wreck.get(`http://www.omdbapi.com/?apikey=${key}&t=${title}`)
+    return payload
+  } catch (err) {
+    throw (err)
+  }
 }
 
 const plugin = {

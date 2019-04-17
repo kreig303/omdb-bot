@@ -3,9 +3,13 @@
 const Wreck = require('@hapi/wreck')
 const Joi = require('@hapi/joi')
 
-let posterCall = async (api, id) => {
-  const { req, res, payload } = await Wreck.get(`http://img.omdbapi.com/?apikey=${api}&i=${id}`)
-  return payload
+let posterCall = async (key, id) => {
+  try {
+    const { payload } = await Wreck.get(`http://img.omdbapi.com/?apikey=${key}&i=${id}`)
+    return payload
+  } catch (err) {
+    throw (err)
+  }
 }
 
 const plugin = {
