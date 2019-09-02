@@ -57,7 +57,7 @@
     "dotenv": "7.0.0",
     "nodemon": "1.19.1",
     "projectz": "1.7.4",
-    "standard": "13.1.0"
+    "standard": "14.1.0"
   },
   "maintainers": [
     "Kreig Zimmerman (https://github.com/kreig303)"
