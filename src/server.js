@@ -2,7 +2,7 @@
 
 require('dotenv').config()
 
-const Hapi = require('hapi')
+const Hapi = require('@hapi/hapi')
 const Boom = require('@hapi/boom')
 
 let appPort = process.env.PORT
