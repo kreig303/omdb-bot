@@ -3,7 +3,7 @@
 const Wreck = require('@hapi/wreck')
 const Joi = require('@hapi/joi')
 
-let posterCall = async (key, id) => {
+const posterCall = async (key, id) => {
   try {
     const { payload } = await Wreck.get(`http://img.omdbapi.com/?apikey=${key}&i=${id}`)
     return payload
@@ -17,7 +17,7 @@ const plugin = {
   version: '0.1.0',
   register: (server, options) => {
     server.route({
-      method: ['GET', 'PUT', 'POST'],
+      method: 'GET',
       path: '/api/poster/{id?}',
       config: {
         validate: {

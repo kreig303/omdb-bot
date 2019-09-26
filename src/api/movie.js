@@ -3,7 +3,7 @@
 const Wreck = require('@hapi/wreck')
 const Joi = require('@hapi/joi')
 
-let movieCall = async (key, title) => {
+const movieCall = async (key, title) => {
   try {
     const { payload } = await Wreck.get(`http://www.omdbapi.com/?apikey=${key}&t=${title}`)
     return payload
@@ -17,7 +17,7 @@ const plugin = {
   version: '0.1.0',
   register: (server, options) => {
     server.route({
-      method: ['GET', 'PUT', 'POST'],
+      method: 'GET',
       path: '/api/movie/{title?}',
       config: {
         validate: {
