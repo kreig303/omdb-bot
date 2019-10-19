@@ -10,7 +10,7 @@
     "lint:fix": "npx standard --fix",
     "start": "node ./src/server.js",
     "start:dev": "nodemon",
-    "test": "lab -t 100",
+    "test": "lab -t 100 && npm run lint",
     "test:cov": "lab -r html -o coverage.html",
     "postversion": "git push --all && git push --tags"
   },
