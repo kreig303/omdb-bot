@@ -14,7 +14,7 @@ const plugin = {
   register: (server, options) => {
     server.route({
       method: 'GET',
-      path: '/api/poster/{id?}',
+      path: '/poster/{id?}',
       config: {
         validate: {
           params: {
@@ -22,14 +22,15 @@ const plugin = {
           }
         }
       },
-      handler: async (request, h) => {
+      handler: async (req, res) => {
         let findPoster
         try {
-          findPoster = await posterCall(process.env.API_KEY, request.params.id)
+          findPoster = await posterCall(process.env.API_KEY, req.params.id)
         } catch (err) {
           console.error(err)
+          throw (err)
         }
-        return h.response(findPoster).type('image/jpeg')
+        return res.response(findPoster).type('image/jpeg')
       }
     })
   }

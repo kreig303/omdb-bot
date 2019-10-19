@@ -14,7 +14,7 @@ const plugin = {
   register: (server, options) => {
     server.route({
       method: 'GET',
-      path: '/api/movie/{title?}',
+      path: '/movie/{title?}',
       config: {
         validate: {
           params: {
@@ -22,14 +22,15 @@ const plugin = {
           }
         }
       },
-      handler: async (request, h) => {
+      handler: async (req, res) => {
         let findMovie
         try {
-          findMovie = await movieCall(process.env.API_KEY, request.params.title)
+          findMovie = await movieCall(process.env.API_KEY, req.params.title)
         } catch (err) {
           console.error(err)
+          throw (err)
         }
-        return h.response(findMovie).type('application/json')
+        return res.response(findMovie).type('application/json')
       }
     })
   }

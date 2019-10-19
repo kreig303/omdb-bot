@@ -15,9 +15,7 @@ const server = Hapi.server({
   host: '0.0.0.0'
 })
 
-const addAPIs = async () => {
-  await server.register([require('./api/movie'), require('./api/poster')])
-}
+const addAPIs = async () => server.register([require('./api/movie'), require('./api/poster')], { routes: { prefix: '/api' } })
 
 const init = async () => {
   server.route({
@@ -41,7 +39,7 @@ const init = async () => {
 
 /*
 ** The following complements DEP0018 by forcing uncaught promise rejections to crash the app.
-** This can also be done viw mcollina's 'make-promises-safe' module.
+** This can also be done via mcollina's 'make-promises-safe' module.
 */
 process.on('unhandledRejection', (err) => {
   console.error(err)
