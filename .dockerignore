@@ -1,0 +1,6 @@
+.gitignore
+test
+.travis.yml
+CONTRIBUTING.md
+README.md
+node_modules
