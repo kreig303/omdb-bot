@@ -1,6 +1,6 @@
 {
   "name": "omdb-bot",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Finds infos from IMDB via OMDB API.",
   "main": "./src/server.js",
   "scripts": {
