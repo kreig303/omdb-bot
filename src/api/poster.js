@@ -28,7 +28,7 @@ const posterJpeg = {
           }
         }
       },
-      handler: async (req, res) => res.response(await posterCall(process.env.API_KEY, req.params.id)).type('image/jpeg')
+      handler: async (request, h) => h.response(await posterCall(process.env.API_KEY, request.params.id)).type('image/jpeg')
     })
   }
 }

@@ -28,7 +28,7 @@ const movieJson = {
           }
         }
       },
-      handler: async (req, res) => res.response(await movieCall(process.env.API_KEY, req.params.title)).type('application/json')
+      handler: async (request, h) => h.response(await movieCall(process.env.API_KEY, request.params.title)).type('application/json')
     })
   }
 }
