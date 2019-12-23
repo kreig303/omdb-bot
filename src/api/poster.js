@@ -2,6 +2,7 @@
 
 const Wreck = require('@hapi/wreck')
 const Joi = require('@hapi/joi')
+const pkg = require('../../package.json')
 
 const posterCall = async (key, id) => {
   const { payload } = await Wreck.get(`http://img.omdbapi.com/?apikey=${key}&i=${id}`)
@@ -10,7 +11,7 @@ const posterCall = async (key, id) => {
 
 const plugin = {
   name: 'poster',
-  version: '0.1.0',
+  version: pkg.version,
   register: (server, options) => {
     server.route({
       method: 'GET',
