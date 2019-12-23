@@ -31,7 +31,7 @@ const init = async () => {
   })
   await addAPIs()
   await server.start()
-  console.log(`Server up on ${server.info.uri}`)
+  console.log(`Server up at ${server.info.uri}`)
 }
 
 /*
