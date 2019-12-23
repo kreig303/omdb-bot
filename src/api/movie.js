@@ -2,7 +2,7 @@
 
 const Wreck = require('@hapi/wreck')
 const Joi = require('@hapi/joi')
-const pkg = require('../../package.json')
+const Pkg = require('../../package.json')
 
 const movieCall = async (key, title) => {
   try {
@@ -14,9 +14,9 @@ const movieCall = async (key, title) => {
   }
 }
 
-const plugin = {
-  name: 'movie',
-  version: pkg.version,
+const movieJson = {
+  name: 'movieJson',
+  version: Pkg.version,
   register: (server, options) => {
     server.route({
       method: 'GET',
@@ -33,4 +33,4 @@ const plugin = {
   }
 }
 
-module.exports = plugin
+module.exports.movieJson = movieJson

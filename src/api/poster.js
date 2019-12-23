@@ -2,7 +2,7 @@
 
 const Wreck = require('@hapi/wreck')
 const Joi = require('@hapi/joi')
-const pkg = require('../../package.json')
+const Pkg = require('../../package.json')
 
 const posterCall = async (key, id) => {
   try {
@@ -14,9 +14,9 @@ const posterCall = async (key, id) => {
   }
 }
 
-const plugin = {
-  name: 'poster',
-  version: pkg.version,
+const posterJpeg = {
+  name: 'posterJpeg',
+  version: Pkg.version,
   register: (server, options) => {
     server.route({
       method: 'GET',
@@ -33,4 +33,4 @@ const plugin = {
   }
 }
 
-module.exports = plugin
+module.exports.posterJpeg = posterJpeg
