@@ -5,10 +5,7 @@ require('dotenv').config()
 const Hapi = require('@hapi/hapi')
 const Boom = require('@hapi/boom')
 
-let appPort = process.env.PORT
-if (!appPort) {
-  appPort = 8000
-}
+const appPort = process.env.PORT ? process.env.PORT : 8000
 
 const server = Hapi.server({
   port: appPort,
