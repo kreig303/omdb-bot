@@ -1,6 +1,6 @@
 {
   "name": "omdb-bot",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Finds infos from IMDB via OMDB API.",
   "main": "./src/server.js",
   "scripts": {
@@ -27,6 +27,15 @@
     "imdb",
     "omdb"
   ],
+  "badges": {
+    "list": [
+      "travisci"
+    ],
+    "config": {}
+  },
+  "engines": {
+    "node": ">=10"
+  },
   "author": "2019 Kreig Zimmerman (https://github.com/kreig303)",
   "contributors": [
     "Kreig Zimmerman (https://github.com/kreig303)"
