@@ -5,8 +5,13 @@ const Joi = require('@hapi/joi')
 const pkg = require('../../package.json')
 
 const posterCall = async (key, id) => {
-  const { payload } = await Wreck.get(`http://img.omdbapi.com/?apikey=${key}&i=${id}`)
-  return payload
+  try {
+    const { payload } = await Wreck.get(`http://img.omdbapi.com/?apikey=${key}&i=${id}`)
+    return payload
+  } catch (err) {
+    console.error(err)
+    throw err
+  }
 }
 
 const plugin = {
