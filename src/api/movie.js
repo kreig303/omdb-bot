@@ -23,16 +23,7 @@ const plugin = {
           }
         }
       },
-      handler: async (req, res) => {
-        let findMovie
-        try {
-          findMovie = await movieCall(process.env.API_KEY, req.params.title)
-        } catch (err) {
-          console.error(err)
-          throw (err)
-        }
-        return res.response(findMovie).type('application/json')
-      }
+      handler: async (req, res) => res.response(await movieCall(process.env.API_KEY, req.params.title)).type('application/json')
     })
   }
 }

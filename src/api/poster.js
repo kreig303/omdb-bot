@@ -23,16 +23,7 @@ const plugin = {
           }
         }
       },
-      handler: async (req, res) => {
-        let findPoster
-        try {
-          findPoster = await posterCall(process.env.API_KEY, req.params.id)
-        } catch (err) {
-          console.error(err)
-          throw (err)
-        }
-        return res.response(findPoster).type('image/jpeg')
-      }
+      handler: async (req, res) => res.response(await posterCall(process.env.API_KEY, req.params.id)).type('image/jpeg')
     })
   }
 }
