@@ -1,10 +1,12 @@
 {
   "name": "omdb-bot",
   "version": "0.4.5",
-  "description": "Finds infos from IMDB via OMDB API.",
+  "description": "Finds film details on IMDB via the OMDB API.",
   "main": "./src/server.js",
   "scripts": {
     "commit": "npx git-cz",
+    "docker:build": "docker build -t omdb-bot .",
+    "docker:run": "docker run -p 8000:8000 omdb-bot",
     "docs": "npx projectz compile",
     "lint": "npx standard",
     "lint:fix": "npx standard --fix",

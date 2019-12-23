@@ -1,6 +1,7 @@
-FROM mhart/alpine-node:10
+FROM mhart/alpine-node:12
 COPY src /omdb-bot/src
-COPY package.json /omdb-bot/package.json
-WORKDIR /omdb-bot/
+COPY package*.json /omdb-bot/
+COPY .env /omdb-bot/
+WORKDIR /omdb-bot
 RUN npm i --production
-ENTRYPOINT [ "/omdb-bot/bin/omdb-bot" ]
+ENTRYPOINT [ "npm", "run", "start" ]

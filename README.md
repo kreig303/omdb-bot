@@ -28,9 +28,9 @@ Finds infos from IMDB via OMDB API.
 ## Install
 
 ```sh
-$ git clone https://github.com/kreig303/omdb-bot.git
-$ cd omdb-bot
-$ npm it
+% git clone https://github.com/kreig303/omdb-bot.git
+% cd omdb-bot
+% npm it
 ```
 
 Then, create a `.env` file at the root of the app directory and include your api key in the following format:
@@ -50,7 +50,13 @@ PORT=some-port
 ### Run
 
 ```sh
-$ npm start
+% npm start
+```
+## Run via Docker
+
+```sh
+% npm run docker:build
+% npm run docker:run
 ```
 
 ### Queries (for REST tool)
