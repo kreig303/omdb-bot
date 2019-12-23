@@ -22,19 +22,19 @@ const init = async () => {
     method: 'GET',
     path: '/',
     handler: (request, h) => {
-      return 'The OMDB bot is up and running.'
+      return 'omdb-bot is available'
     }
   })
   server.route({
     method: '*',
     path: '/{any*}',
     handler: (request, h) => {
-      return Boom.notFound('That path doesn\'t exist!')
+      return Boom.notFound()
     }
   })
   await addAPIs()
   await server.start()
-  console.log('Server up on %s', server.info.uri)
+  console.log(`Server up on ${server.info.uri}`)
 }
 
 /*
