@@ -14,7 +14,7 @@
 
 <!-- DESCRIPTION/ -->
 
-Finds infos from IMDB via OMDB API.
+Finds film details on IMDB via the OMDB API.
 
 <!-- /DESCRIPTION -->
 
