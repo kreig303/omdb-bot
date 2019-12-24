@@ -9,9 +9,10 @@ services:
     restart: unless-stopped
     env_file: .env
     environment:
-      - API_KEY=$API_KEY
+      - BOT_PORT=$BOT_PORT
+      - BOT_KEY=$BOT_KEY
     ports:
-      - "$PORT:$PORT"
+      - "$BOT_PORT:$BOT_PORT"
     volumes:
       - .:/omdb-bot
       - node_modules:/omdb-bot/node_modules
