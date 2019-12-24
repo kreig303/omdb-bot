@@ -3,10 +3,12 @@
 const Wreck = require('@hapi/wreck')
 const Joi = require('@hapi/joi')
 const Pkg = require('../../package.json')
+const Boom = require('@hapi/boom')
 
 const posterCall = async (key, id) => {
   try {
-    const { payload } = await Wreck.get(`http://img.omdbapi.com/?apikey=${key}&i=${id}`)
+    const { res, payload } = await Wreck.get(`http://img.omdbapi.com/?apikey=${key}&i=${id}`)
+    if (res.statusCode === 200 && payload.toString('ascii') === 'Error: Invalid API key!') throw Boom.unauthorized('Response Error: 401 Unauthorized')
     return payload
   } catch (err) {
     console.error(err)
