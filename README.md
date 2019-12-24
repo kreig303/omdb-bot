@@ -21,16 +21,16 @@ Finds infos from IMDB via OMDB API.
 
 ## Prerequisites
 
-1. `git` and `node` must be installed. Use Node 10+.
+1. `git` and `node` must be installed. Requires Node 12+.
 2. Download a REST tool such as [Paw](https://paw.cloud) (Macintosh only) or [Postman](https://www.getpostman.com) (all major platforms).
 3. Register for an API key at [OMDB API](https://www.omdbapi.com/apikey.aspx).
 
 ## Install
 
 ```sh
-$ git clone https://github.com/kreig303/omdb-bot.git
-$ cd omdb-bot
-$ npm it
+% git clone https://github.com/kreig303/omdb-bot.git
+% cd omdb-bot
+% npm it
 ```
 
 Then, create a `.env` file at the root of the app directory and include your api key in the following format:
@@ -47,13 +47,21 @@ PORT=some-port
 
 ## Usage
 
-### Run
+### Develop
 
 ```sh
-$ npm start
+% npm run start:dev
+```
+### Run (via Docker)
+
+To use Docker, ensure you have [Docker CE](https://www.docker.com/products/developer-tools) installed.
+
+```sh
+% docker-compose build
+% docker-compose up
 ```
 
-### Queries (for REST tool)
+### Endpoints
 
 1. ```http://localhost:8000/api/movie/[title of film]``` (gets movie info)
 2. ```http://localhost:8000/api/poster/[imdb id for film]``` (gets movie poster)

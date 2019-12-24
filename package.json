@@ -1,14 +1,14 @@
 {
   "name": "omdb-bot",
   "version": "0.4.5",
-  "description": "Finds infos from IMDB via OMDB API.",
+  "description": "Finds film details on IMDB via the OMDB API.",
   "main": "./src/server.js",
   "scripts": {
     "commit": "npx git-cz",
     "docs": "npx projectz compile",
     "lint": "npx standard",
     "lint:fix": "npx standard --fix",
-    "start": "node ./src/server.js",
+    "start": "node ./src/server.js --unhandled-rejections=strict ",
     "start:dev": "nodemon",
     "test": "lab -t 100 && npm run lint",
     "test:cov": "lab -r html -o coverage.html",
@@ -35,7 +35,7 @@
     "config": {}
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "author": "2019 Kreig Zimmerman (https://github.com/kreig303)",
   "contributors": [
@@ -52,7 +52,7 @@
     }
   },
   "devDependencies": {
-    "@hapi/lab": "20.3.2",
+    "@hapi/lab": "^21.0.0",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
     "nodemon": "1.19.4",

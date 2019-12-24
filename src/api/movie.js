@@ -2,16 +2,21 @@
 
 const Wreck = require('@hapi/wreck')
 const Joi = require('@hapi/joi')
-const pkg = require('../../package.json')
+const Pkg = require('../../package.json')
 
 const movieCall = async (key, title) => {
-  const { payload } = await Wreck.get(`http://www.omdbapi.com/?apikey=${key}&t=${title}`)
-  return payload
+  try {
+    const { payload } = await Wreck.get(`http://www.omdbapi.com/?apikey=${key}&t=${title}`)
+    return payload
+  } catch (err) {
+    console.error(err)
+    throw err
+  }
 }
 
-const plugin = {
-  name: 'movie',
-  version: pkg.version,
+const movieJson = {
+  name: 'movieJson',
+  version: Pkg.version,
   register: (server, options) => {
     server.route({
       method: 'GET',
@@ -23,9 +28,9 @@ const plugin = {
           }
         }
       },
-      handler: async (req, res) => res.response(await movieCall(process.env.API_KEY, req.params.title)).type('application/json')
+      handler: async (request, h) => h.response(await movieCall(process.env.API_KEY, request.params.title)).type('application/json')
     })
   }
 }
 
-module.exports = plugin
+module.exports.movieJson = movieJson
