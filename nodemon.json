@@ -1,0 +1,12 @@
+{
+  "restartable": "r",
+  "verbose": true,
+  "ignore": [
+    "test/**/*.*",
+    "*.md",
+    "*.json"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

@@ -8,8 +8,8 @@
     "docs": "npx projectz compile",
     "lint": "npx standard",
     "lint:fix": "npx standard --fix",
-    "start": "node ./src/server.js --unhandled-rejections=strict ",
-    "start:dev": "nodemon",
+    "start": "node ./src/server.js --unhandled-rejections=strict",
+    "start:dev": "nodemon ./src/server.js --unhandled-rejections=strict",
     "test": "lab -t 100 && npm run lint",
     "test:cov": "lab -r html -o coverage.html",
     "postversion": "git push --all && git push --tags"
