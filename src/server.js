@@ -33,15 +33,6 @@ const init = async () => {
   await server.start()
   console.log(`Server up at ${server.info.uri}`)
 }
-
-/*
-** The following complements DEP0018 by forcing uncaught promise rejections to crash the app.
-** This can also be done via mcollina's 'make-promises-safe' module.
-*/
-process.on('unhandledRejection', (err) => {
-  console.error(err)
-  process.exit(1)
-})
 /*
 ** Setup is complete. Execute the server init() command.
 */

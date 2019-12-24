@@ -8,7 +8,7 @@
     "docs": "npx projectz compile",
     "lint": "npx standard",
     "lint:fix": "npx standard --fix",
-    "start": "node ./src/server.js",
+    "start": "node ./src/server.js --unhandled-rejections=strict ",
     "start:dev": "nodemon",
     "test": "lab -t 100 && npm run lint",
     "test:cov": "lab -r html -o coverage.html",
@@ -35,7 +35,7 @@
     "config": {}
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "author": "2019 Kreig Zimmerman (https://github.com/kreig303)",
   "contributors": [

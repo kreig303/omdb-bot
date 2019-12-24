@@ -21,7 +21,7 @@ Finds infos from IMDB via OMDB API.
 
 ## Prerequisites
 
-1. `git` and `node` must be installed. Use Node 10+.
+1. `git` and `node` must be installed. Requires Node 12+.
 2. Download a REST tool such as [Paw](https://paw.cloud) (Macintosh only) or [Postman](https://www.getpostman.com) (all major platforms).
 3. Register for an API key at [OMDB API](https://www.omdbapi.com/apikey.aspx).
 
@@ -47,12 +47,12 @@ PORT=some-port
 
 ## Usage
 
-### Run
+### Develop
 
 ```sh
-% npm start
+% npm run start:dev
 ```
-## Run via Docker
+### Run (via Docker)
 
 To use Docker, ensure you have [Docker CE](https://www.docker.com/products/developer-tools) installed.
 
@@ -61,7 +61,7 @@ To use Docker, ensure you have [Docker CE](https://www.docker.com/products/devel
 % docker-compose up
 ```
 
-### Queries (for REST tool)
+### Endpoints
 
 1. ```http://localhost:8000/api/movie/[title of film]``` (gets movie info)
 2. ```http://localhost:8000/api/poster/[imdb id for film]``` (gets movie poster)
