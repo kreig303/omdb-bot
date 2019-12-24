@@ -15,7 +15,7 @@ const server = Hapi.server({
   host: '0.0.0.0'
 })
 
-const addAPIs = async () => server.register([require('./api/movie').movieJson, require('./api/poster').posterJpeg], { routes: { prefix: '/api' } })
+const addAPIs = async () => server.register([require('./api/').movieJson, require('./api/').posterJpeg], { routes: { prefix: '/api' } })
 
 const init = async () => {
   server.route({
