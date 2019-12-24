@@ -54,9 +54,11 @@ PORT=some-port
 ```
 ## Run via Docker
 
+To use Docker, ensure you have [Docker CE](https://www.docker.com/products/developer-tools) installed.
+
 ```sh
-% npm run docker:build
-% npm run docker:run
+% docker-compose build
+% docker-compose up
 ```
 
 ### Queries (for REST tool)

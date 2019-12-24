@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  omdb-bot:
+    build:
+      context: .
+    image: omdb-bot
+    container_name: omdb-bot
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - API_KEY=$API_KEY
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/omdb-bot
+      - node_modules:/omdb-bot/node_modules
+volumes:
+  .:
+  node_modules:
