@@ -30,7 +30,7 @@ const posterJpeg = {
           }
         }
       },
-      handler: async (request, h) => h.response(await posterCall(process.env.API_KEY, request.params.id)).type('image/jpeg')
+      handler: async (request, h) => h.response(await posterCall(process.env.BOT_KEY, request.params.id)).type('image/jpeg')
     })
   }
 }

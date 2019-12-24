@@ -21,11 +21,11 @@ Finds film details on IMDB via the OMDB API.
 
 ## Prerequisites
 
-1. `git` and `node` must be installed. Requires Node 12+.
-2. Download a REST tool such as [Paw](https://paw.cloud) (Macintosh only) or [Postman](https://www.getpostman.com) (all major platforms).
-3. Register for an API key at [OMDB API](https://www.omdbapi.com/apikey.aspx).
+1. [git](https://git-scm.com/downloads).
+2. [Node 12+](https://nodejs.org/en/download/).
+3. [Docker Desktop](https://www.docker.com/products/developer-tools)
 
-## Install
+## Installation
 
 ```sh
 % git clone https://github.com/kreig303/omdb-bot.git
@@ -33,17 +33,16 @@ Finds film details on IMDB via the OMDB API.
 % npm it
 ```
 
-Then, create a `.env` file at the root of the app directory and include your api key in the following format:
+## Configuration
 
+1. [Register for an OMDB API key](https://www.omdbapi.com/).
+2. Create a `.env` file at the root of the app directory
+3. Configure `.env` as follows. Port 8000 is my default. [YMMV](https://dictionary.cambridge.org/us/dictionary/english/ymmv).
 ```
-API_KEY=your-api-key
+BOT_PORT=8000
+BOT_KEY=abcdefg
 ```
 
-If you are using port 8000 (the default) for something else, you can also add a different port here:
-
-```
-PORT=some-port
-```
 
 ## Usage
 
@@ -52,19 +51,23 @@ PORT=some-port
 ```sh
 % npm run start:dev
 ```
-### Run (via Docker)
+### Run
 
-To use Docker, ensure you have [Docker CE](https://www.docker.com/products/developer-tools) installed.
-
+#### Docker
 ```sh
 % docker-compose build
 % docker-compose up
 ```
 
+#### CLI
+```sh
+% npm start
+```
+
 ### Endpoints
 
-1. ```http://localhost:8000/api/movie/[title of film]``` (gets movie info)
-2. ```http://localhost:8000/api/poster/[imdb id for film]``` (gets movie poster)
+1. ```/api/movie/[title of film]``` (gets movie info)
+2. ```/api/poster/[imdb id for film]``` (gets movie poster)
 
 <!-- HISTORY/ -->
 
