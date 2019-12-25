@@ -5,7 +5,7 @@ require('dotenv').config()
 const Hapi = require('@hapi/hapi')
 const Boom = require('@hapi/boom')
 
-if (!process.env.PORT && !process.env.BOT_KEY) {
+if (!process.env.PORT || !process.env.BOT_KEY) {
   console.error('Missing .env variables. Exiting.')
   process.exit(1)
 }
