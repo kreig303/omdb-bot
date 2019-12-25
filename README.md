@@ -39,7 +39,7 @@ Finds film details on IMDB via the OMDB API.
 2. Create a `.env` file at the root of the app directory
 3. Configure `.env` as follows. Port 8000 is my default. [YMMV](https://dictionary.cambridge.org/us/dictionary/english/ymmv).
 ```
-BOT_PORT=8000
+PORT=8000
 BOT_KEY=abcdefg
 ```
 

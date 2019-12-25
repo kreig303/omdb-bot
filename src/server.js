@@ -5,13 +5,13 @@ require('dotenv').config()
 const Hapi = require('@hapi/hapi')
 const Boom = require('@hapi/boom')
 
-if (!process.env.BOT_PORT || !process.env.BOT_KEY) {
+if (!process.env.PORT && !process.env.BOT_KEY) {
   console.error('Missing .env variables. Exiting.')
   process.exit(1)
 }
 
 const server = Hapi.server({
-  port: process.env.BOT_PORT,
+  port: process.env.PORT,
   host: '0.0.0.0'
 })
 
