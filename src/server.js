@@ -4,6 +4,7 @@ require('dotenv').config()
 
 const Hapi = require('@hapi/hapi')
 const Boom = require('@hapi/boom')
+const Pkg = require('../package.json')
 
 if (!process.env.PORT || !process.env.BOT_KEY) {
   console.error('Missing .env variables. Exiting.')
@@ -22,7 +23,7 @@ const init = async () => {
     method: 'GET',
     path: '/',
     handler: (request, h) => {
-      return 'omdb-bot is available'
+      return `omdb-bot v${Pkg.version} is available`
     }
   })
   server.route({
