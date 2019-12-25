@@ -63,7 +63,7 @@
     "Kreig Zimmerman (https://github.com/kreig303)"
   ],
   "dependencies": {
-    "@hapi/boom": "7.4.10",
+    "@hapi/boom": "8.0.1",
     "@hapi/hapi": "18.4.0",
     "@hapi/joi": "15.1.1",
     "@hapi/wreck": "16.0.1",
