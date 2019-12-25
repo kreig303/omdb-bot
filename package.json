@@ -55,7 +55,7 @@
     "@hapi/lab": "21.0.0",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
-    "nodemon": "1.19.4",
+    "nodemon": "2.0.2",
     "projectz": "1.19.0",
     "standard": "14.3.1"
   },
