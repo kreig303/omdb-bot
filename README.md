@@ -21,6 +21,8 @@ Finds film details on IMDB via the OMDB API.
 
 ## Prerequisites
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kreig303/omdb-bot.svg)](https://greenkeeper.io/)
+
 1. [git](https://git-scm.com/downloads).
 2. [Node 12+](https://nodejs.org/en/download/).
 3. [Docker Desktop](https://www.docker.com/products/developer-tools)
