@@ -5,10 +5,15 @@ const Joi = require('@hapi/joi')
 const Pkg = require('../../package.json')
 const Boom = require('@hapi/boom')
 
+const movieWreck = Wreck.defaults({})
+const posterWreck = Wreck.defaults({})
+
 const movieCall = async (key, title) => {
+  const promise = movieWreck.request('GET', `/?apikey=${key}&t=${title}`, { baseUrl: 'http://www.omdbapi.com' })
   try {
-    const { payload } = await Wreck.get(`http://www.omdbapi.com/?apikey=${key}&t=${title}`)
-    return payload
+    const res = await promise
+    const body = await movieWreck.read(res, {})
+    return body
   } catch (err) {
     console.error(err)
     throw err
@@ -16,10 +21,12 @@ const movieCall = async (key, title) => {
 }
 
 const posterCall = async (key, id) => {
+  const promise = posterWreck.request('GET', `/?apikey=${key}&i=${id}`, { baseUrl: 'http://img.omdbapi.com' })
   try {
-    const { res, payload } = await Wreck.get(`http://img.omdbapi.com/?apikey=${key}&i=${id}`)
-    if (res.statusCode === 200 && payload.toString('ascii') === 'Error: Invalid API key!') throw Boom.unauthorized('Response Error: 401 Unauthorized')
-    return payload
+    const res = await promise
+    const body = await posterWreck.read(res, {})
+    if (res.statusCode === 200 && body.toString('ascii') === 'Error: Invalid API key!') throw Boom.unauthorized('Response Error: 401 Unauthorized')
+    return body
   } catch (err) {
     console.error(err)
     throw err
