@@ -42,9 +42,9 @@ const movieJson = {
       path: '/movie/{title?}',
       config: {
         validate: {
-          params: {
+          params: Joi.object({
             title: Joi.string().required()
-          }
+          })
         }
       },
       handler: async (request, h) => h.response(await movieCall(process.env.BOT_KEY, request.params.title)).type('application/json')
@@ -61,9 +61,9 @@ const posterJpeg = {
       path: '/poster/{id?}',
       config: {
         validate: {
-          params: {
+          params: Joi.object({
             id: Joi.string().min(9).max(10).required()
-          }
+          })
         }
       },
       handler: async (request, h) => h.response(await posterCall(process.env.BOT_KEY, request.params.id)).type('image/jpeg')
