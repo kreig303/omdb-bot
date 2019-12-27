@@ -8,6 +8,7 @@
 <!-- BADGES/ -->
 
 <span class="badge-travisci"><a href="http://travis-ci.org/kreig303/omdb-bot" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/kreig303/omdb-bot/master.svg" alt="Travis CI Build Status" /></a></span>
+&nbsp;[![Greenkeeper badge](https://badges.greenkeeper.io/kreig303/omdb-bot.svg)](https://greenkeeper.io/)
 
 <!-- /BADGES -->
 
