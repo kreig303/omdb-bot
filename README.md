@@ -1,5 +1,5 @@
 # omdb-bot
-[![Travis CI Build Status](https://img.shields.io/travis/kreig303/omdb-bot/master.svg)](http://travis-ci.org/kreig303/omdb-bot)
+[![Travis CI Build Status](https://img.shields.io/travis/kreig303/omdb-bot/master.svg)](http://travis-ci.com/kreig303/omdb-bot)
 &nbsp;[![Greenkeeper badge](https://badges.greenkeeper.io/kreig303/omdb-bot.svg)](https://greenkeeper.io/)
 
 Finds film details on IMDB via the OMDB API.
@@ -20,7 +20,7 @@ Finds film details on IMDB via the OMDB API.
 1. [Register for an OMDB API key](https://www.omdbapi.com/).
 2. Create a `.env` file at the root of the app directory
 3. Configure `.env` as follows. Port 8000 is my default. [YMMV](https://dictionary.cambridge.org/us/dictionary/english/ymmv).
-```
+```env
 PORT=8000
 BOT_KEY=abcdefg
 ```
