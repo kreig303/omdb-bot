@@ -39,7 +39,7 @@
     }
   },
   "devDependencies": {
-    "@hapi/lab": "21.0.0",
+    "@hapi/lab": "22.0.1",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
     "nodemon": "2.0.2",
