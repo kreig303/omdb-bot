@@ -71,5 +71,7 @@ const posterJpeg = {
   }
 }
 
-module.exports.movieJson = movieJson
-module.exports.posterJpeg = posterJpeg
+module.exports = {
+  movieJson: movieJson,
+  posterJpeg: posterJpeg
+}
