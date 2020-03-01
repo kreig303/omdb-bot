@@ -39,7 +39,7 @@
     }
   },
   "devDependencies": {
-    "@hapi/lab": "21.0.0",
+    "@hapi/lab": "22.0.3",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.1.0",
     "nodemon": "2.0.2",
@@ -49,10 +49,10 @@
     "Kreig Zimmerman (https://github.com/kreig303)"
   ],
   "dependencies": {
-    "@hapi/boom": "8.0.1",
-    "@hapi/hapi": "18.4.0",
-    "@hapi/joi": "16.1.8",
-    "@hapi/wreck": "16.0.1",
+    "@hapi/boom": "9.0.0",
+    "@hapi/hapi": "19.1.1",
+    "@hapi/joi": "17.1.0",
+    "@hapi/wreck": "17.0.0",
     "dotenv": "8.2.0"
   }
 }
