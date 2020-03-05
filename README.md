@@ -1,6 +1,6 @@
 # omdb-bot
 [![Travis CI Build Status](https://img.shields.io/travis/kreig303/omdb-bot/master.svg)](http://travis-ci.com/kreig303/omdb-bot)
-&nbsp;[![Greenkeeper badge](https://badges.greenkeeper.io/kreig303/omdb-bot.svg)](https://greenkeeper.io/)
+&nbsp;[![Known Vulnerabilities](https://snyk.io/test/github/kreig303/omdb-bot/badge.svg?targetFile=package.json)](https://snyk.io/test/github/kreig303/omdb-bot?targetFile=package.json)
 
 Finds film details on IMDB via the OMDB API.
 
