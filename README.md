@@ -1,6 +1,8 @@
 # omdb-bot
 [![Travis CI Build Status](https://img.shields.io/travis/kreig303/omdb-bot/master.svg)](http://travis-ci.com/kreig303/omdb-bot)
 &nbsp;[![Known Vulnerabilities](https://snyk.io/test/github/kreig303/omdb-bot/badge.svg?targetFile=package.json)](https://snyk.io/test/github/kreig303/omdb-bot?targetFile=package.json)
+&nbsp;[![dependencies Status](https://david-dm.org/kreig303/omdb-bot/status.svg)](https://david-dm.org/kreig303/omdb-bot)
+&nbsp;[![devDependencies Status](https://david-dm.org/kreig303/omdb-bot/dev-status.svg)](https://david-dm.org/kreig303/omdb-bot?type=dev)
 
 Finds film details on IMDB via the OMDB API.
 
