@@ -2,7 +2,20 @@
   "name": "omdb-bot",
   "version": "0.8.1",
   "description": "Finds film details on IMDB via the OMDB API.",
+  "keywords": [
+    "imdb",
+    "omdb"
+  ],
   "main": "./src/server.js",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kreig303/omdb-bot/issues"
+  },
+  "homepage": "https://github.com/kreig303/omdb-bot#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kreig303/omdb-bot.git"
+  },
   "scripts": {
     "commit": "npx git-cz",
     "lint": "npx standard",
@@ -13,30 +26,27 @@
     "test:cov": "lab -r html -o coverage.html",
     "postversion": "git push --all && git push --tags"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kreig303/omdb-bot.git"
-  },
-  "keywords": [
-    "imdb",
-    "omdb"
-  ],
   "engines": {
     "node": ">=12"
   },
-  "author": "2019 Kreig Zimmerman (https://github.com/kreig303)",
+  "author": "Kreig Zimmerman (https://github.com/kreig303)",
   "contributors": [
     "Kreig Zimmerman (https://github.com/kreig303)"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kreig303/omdb-bot/issues"
-  },
-  "homepage": "https://github.com/kreig303/omdb-bot#readme",
+  "maintainers": [
+    "Kreig Zimmerman (https://github.com/kreig303)"
+  ],
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/joi": "^17.1.1",
+    "@hapi/wreck": "^17.0.0",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
     "@hapi/code": "^8.0.1",
@@ -45,15 +55,5 @@
     "cz-conventional-changelog": "^3.1.0",
     "nodemon": "^2.0.2",
     "standard": "^14.3.1"
-  },
-  "maintainers": [
-    "Kreig Zimmerman (https://github.com/kreig303)"
-  ],
-  "dependencies": {
-    "@hapi/boom": "^9.1.0",
-    "@hapi/hapi": "^19.1.1",
-    "@hapi/joi": "^17.1.1",
-    "@hapi/wreck": "^17.0.0",
-    "dotenv": "^8.2.0"
   }
 }
