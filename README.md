@@ -50,7 +50,13 @@ $ npm start
 ### Queries (for REST tool)
 
 1. ```http://localhost:3030/api/movie/[title of film]``` (gets movie info)
-2. ```http://localhost:3030/api/poster/[imdb id for film]``` (gets movie poster)
+2. ```http://localhost:3030/api/poster/[title of film]``` (gets movie poster)
+
+#### Testing movie poster in CLI
+
+No browser? no problems. Use cURL and img2text (available on npm):
+
+`curl http://localhost:3030/api/poster/nemo --output - > file.png && img2txt file.png`
 
 <!-- HISTORY/ -->
 
