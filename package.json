@@ -46,7 +46,7 @@
     "@hapi/hapi": "^19.1.1",
     "@hapi/joi": "^17.1.1",
     "@hapi/wreck": "^17.0.0",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.5.1"
   },
   "devDependencies": {
     "@hapi/code": "^8.0.1",
